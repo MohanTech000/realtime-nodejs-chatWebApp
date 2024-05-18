@@ -7,7 +7,7 @@ export const userAuth = async (req, res) => {
         const response = await axios.put(
             "https://api.chatengine.io/users/",
             { username: username, secret: username, first_name: username },
-            { headers: { "private-key": "efe8b52b-df29-4c65-9236-c49f6966e1ac" } }
+            { headers: { "private-key": "efe8b52b-df29-4c65-9236-c49f6966e1ac" } } //pass your own project private key 
         );
         return res.status(201).json(response.data);
     } catch (error) {
